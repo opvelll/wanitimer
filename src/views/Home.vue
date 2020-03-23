@@ -46,6 +46,7 @@
                 <div class="mr-3 text-muted">期間: {{ item.settingDays }} 日</div>
               </div>-->
               <div>{{ elapsedDays(item.startDate) }} 日目</div>
+              <div>今日: {{new Date() | moment("LL")}}</div>
               <div>
                 死まであと
                 {{ remainingDays(item.startDate, item.settingDays) }} 日
