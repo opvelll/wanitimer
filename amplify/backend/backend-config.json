@@ -6,5 +6,26 @@
 			"dependsOn": [],
 			"customAuth": false
 		}
+	},
+	"api": {
+		"wanitimer": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [
+						{
+							"authenticationType": "AWS_IAM"
+						}
+					],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authwanitimer16c776a3"
+						}
+					}
+				}
+			}
+		}
 	}
 }
