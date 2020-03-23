@@ -12,7 +12,7 @@
         <router-link to="/signin">Sign In</router-link>
       </b-nav-item>
       <b-nav-item>
-        <router-link to="/sign out">Sign Out</router-link>
+        <router-link to="/signout">Sign Out</router-link>
       </b-nav-item>
     </b-nav>
     <div class="container">
