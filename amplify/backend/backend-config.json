@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"wanitimer16c776a3": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}
