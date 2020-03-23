@@ -108,8 +108,8 @@ export default {
   },
   methods: {
     onCreateFinished() {
-      console.log("Todo created!");
-      location.reload();
+      //console.log("Todo created!");
+      this.$router.go({ path: this.$router.currentRoute.path, force: true });
     },
     // 経過日数
     elapsedDays(startDate) {
