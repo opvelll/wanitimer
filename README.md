@@ -1,8 +1,7 @@
 # wanitimer
 
-死まであと何日か表示する Web アプリ. 元ネタ:100 日後に死ぬワニ. AWS Amplify Sample
-
-blog: https://opvel.com/2020/03/24/post-1061/
+100 日後に死ぬワニ みたいなタイマーWebアプリ。
+aws amplifyを試してみたプロジェクト。
 
 site: https://wanitimer.d2v7szbbzh7lnj.amplifyapp.com/ (たぶんそのうち消す)
 
