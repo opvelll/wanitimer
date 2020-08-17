@@ -28,7 +28,7 @@
                         ></b-form-spinbutton>
                       </b-form-group>
 
-                      <b-button variant="primary" :disabled="loading" @click="mutate">作成</b-button>
+                      <b-button variant="primary" :disabled="loading" @click="mutate">登録</b-button>
                     </b-form>
                   </div>
                 </template>
@@ -101,9 +101,9 @@ export default {
       form: {
         id: "",
         startDate: moment().format("YYYY-MM-DD"),
-        settingDays: 100
+        settingDays: 100,
       },
-      isViewUpdateForm: false
+      isViewUpdateForm: false,
     };
   },
   methods: {
@@ -136,7 +136,7 @@ export default {
       this.form.id = item.id;
       this.form.startDate = moment.unix(item.startDate).format("YYYY-MM-DD");
       this.form.settingDays = item.settingDays;
-    }
+    },
   },
   computed: {
     updatePlanMutation() {
@@ -144,8 +144,8 @@ export default {
         input: {
           id: this.form.id,
           startDate: moment(this.form.startDate, "YYYY-MM-DD").unix(),
-          settingDays: this.form.settingDays
-        }
+          settingDays: this.form.settingDays,
+        },
       };
       // console.log(value);
       return this.$Amplify.graphqlOperation(updatePlan, value);
@@ -154,14 +154,14 @@ export default {
       const value = {
         input: {
           startDate: moment(this.form.startDate, "YYYY-MM-DD").unix(),
-          settingDays: this.form.settingDays
-        }
+          settingDays: this.form.settingDays,
+        },
       };
       return this.$Amplify.graphqlOperation(createPlan, value);
     },
     listTodosQuery() {
       return this.$Amplify.graphqlOperation(listPlans);
-    }
-  }
+    },
+  },
 };
 </script>
