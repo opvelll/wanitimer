@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-nav id="nav" align="center">
-      <b-nav-text>死までタイマー</b-nav-text>
+      <b-nav-text>100日タイマー</b-nav-text>
       <b-nav-item>
         <router-link to="/">Home</router-link>
       </b-nav-item>
@@ -24,9 +24,9 @@
 <script>
 export default {
   computed: {
-    isSignedIn: function() {
+    isSignedIn: function () {
       return this.$store.getters.isSignIn;
-    }
-  }
+    },
+  },
 };
 </script>
