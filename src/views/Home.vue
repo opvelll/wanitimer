@@ -48,7 +48,7 @@
               <div>{{ elapsedDays(item.startDate) }} 日目</div>
               <div>今日: {{new Date() | moment("LL")}}</div>
               <div>
-                死まであと
+                100日後まであと
                 {{ remainingDays(item.startDate, item.settingDays) }} 日
                 <span
                   v-if="isOver(item.startDate, item.settingDays)"
