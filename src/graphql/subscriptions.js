@@ -7,6 +7,8 @@ export const onCreatePlan = /* GraphQL */ `
       id
       startDate
       settingDays
+      createdAt
+      updatedAt
       owner
     }
   }
@@ -17,6 +19,8 @@ export const onUpdatePlan = /* GraphQL */ `
       id
       startDate
       settingDays
+      createdAt
+      updatedAt
       owner
     }
   }
@@ -27,6 +31,8 @@ export const onDeletePlan = /* GraphQL */ `
       id
       startDate
       settingDays
+      createdAt
+      updatedAt
       owner
     }
   }

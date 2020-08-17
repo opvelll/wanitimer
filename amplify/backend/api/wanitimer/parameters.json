@@ -1,10 +1,10 @@
 {
     "AppSyncApiName": "wanitimer",
     "DynamoDBBillingMode": "PAY_PER_REQUEST",
-    "DynamoDBEnableServerSideEncryption": "false",
+    "DynamoDBEnableServerSideEncryption": false,
     "AuthCognitoUserPoolId": {
         "Fn::GetAtt": [
-            "authwanitimer16c776a3",
+            "authwanitimer0e5d89c4",
             "Outputs.UserPoolId"
         ]
     }

@@ -1,0 +1,5 @@
+type Plan @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  startDate: AWSTimestamp!
+  settingDays: Int!
+}

@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "wanitimer16c776a3_identitypool_16c776a3",
+    "identityPoolName": "wanitimer0e5d89c4_identitypool_0e5d89c4",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "waniti16c776a3",
-    "userPoolName": "wanitimer16c776a3_userpool_16c776a3",
+    "resourceNameTruncated": "waniti0e5d89c4",
+    "userPoolName": "wanitimer0e5d89c4_userpool_0e5d89c4",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,9 +28,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "waniti16c776a3_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "waniti0e5d89c4_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "resourceName": "wanitimer16c776a3",
+    "sharedId": "0e5d89c4",
+    "resourceName": "wanitimer0e5d89c4",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [

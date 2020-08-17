@@ -7,6 +7,8 @@ export const getPlan = /* GraphQL */ `
       id
       startDate
       settingDays
+      createdAt
+      updatedAt
       owner
     }
   }
@@ -22,6 +24,8 @@ export const listPlans = /* GraphQL */ `
         id
         startDate
         settingDays
+        createdAt
+        updatedAt
         owner
       }
       nextToken
