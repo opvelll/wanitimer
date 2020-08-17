@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-nav id="nav" align="center">
-      <b-nav-text>100日タイマー</b-nav-text>
+      <b-nav-text>100日ワニタイマー</b-nav-text>
       <b-nav-item>
         <router-link to="/">Home</router-link>
       </b-nav-item>
