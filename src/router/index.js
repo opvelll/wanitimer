@@ -21,12 +21,12 @@ getUser().then((user, error) => {
     router.push({ path: "/" }, () => {});
   }
   if (error) {
-    console.error(error);
+    // console.error(error);
   }
 });
 
-AmplifyEventBus.$on("authState", async state => {
-  console.info("state", state);
+AmplifyEventBus.$on("authState", async (state) => {
+  // console.info("state", state);
   if (state === "signedOut") {
     user = null;
     UserDataStore.commit("setUser", null);
@@ -39,14 +39,14 @@ AmplifyEventBus.$on("authState", async state => {
 
 function getUser() {
   return Vue.prototype.$Amplify.Auth.currentAuthenticatedUser()
-    .then(data => {
+    .then((data) => {
       if (data && data.signInUserSession) {
         UserDataStore.commit("setUser", data);
         return data;
       }
     })
-    .catch(e => {
-      console.info(e);
+    .catch(() => {
+      // console.info(e);
       UserDataStore.commit("setUser", null);
       return null;
     });
@@ -57,43 +57,43 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
-    meta: { requiresAuth: true }
+    meta: { requiresAuth: true },
   },
   {
     path: "/about",
     name: "About",
     component: About,
-    meta: { requiresAuth: false }
+    meta: { requiresAuth: false },
   },
   {
     path: "/signin",
     name: "SignIn",
     component: SignIn,
-    meta: { requiresAuth: false }
+    meta: { requiresAuth: false },
   },
   {
     path: "/signout",
     name: "SignOut",
     component: SignOut,
-    meta: { requiresAuth: true }
-  }
+    meta: { requiresAuth: true },
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 router.beforeResolve(async (to, from, next) => {
-  if (to.matched.some(record => record.meta.requiresAuth)) {
+  if (to.matched.some((record) => record.meta.requiresAuth)) {
     user = await getUser();
     if (!user) {
       return next({
         path: "/signin",
         query: {
-          redirect: to.fullPath
-        }
+          redirect: to.fullPath,
+        },
       });
     }
     return next();
