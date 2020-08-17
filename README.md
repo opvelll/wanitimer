@@ -5,7 +5,8 @@
 
 環境 : AWS Amplify
 
-アドレス:
+アドレス:https://master.d3a9hlxk2vvnnd.amplifyapp.com/
+
 画面:  
 ![wanitimer](./src/assets/wanitimer3.png)
 
